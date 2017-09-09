@@ -1,0 +1,8 @@
+binary language for sput. 
+
+this binary language uses a huffman encoding like tree structure to determine word-meaning association.
+
+the tree starts with 0, as the null value, 
+
+and 1 as meaning something.
+

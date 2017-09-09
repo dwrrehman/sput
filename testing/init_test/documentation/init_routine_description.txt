@@ -1,0 +1,116 @@
+this is documentation of the initialization process that sput must go through.
+
+
+
+ -------------- agenda: ----------------
+ 
+ 1. test LED's
+    each led on then off for 500 millis each.
+
+ 2. test senses 
+   2a. test touch (tbc)
+   2b. test vision (tbc)
+
+ 3. test motors
+   3z. position head motor to a known position, (straighten head)
+   3a. head motor,  up and then down, 
+   3b. left motor,  forwards and then backwards alittle bit
+   3c. right motor, forwards and then backwards alittle bit 
+ 
+ 4. ...tbd
+ 
+
+---------------------------------------
+
+
+
+
+
+
+--------- descriptions ---------------
+
+there are two section of the init function coded to date, (1707296.)
+- test_leds()
+- test_motors()
+
+------- test_leds(): ---------
+this function tests the functionality of all the leds.
+
+it tests each led by flashing it on for half a second, and turning it off for half a second. it does this for every led/ledcolor.
+
+
+------ test_motors(): ----------
+this function tests all the motors on sput, starting with head, then left, and finally right.
+
+the function accepts three integer parameters, which designate the distances for each motor to be traveled.
+
+the function test each motor by going forwards by whole steps for the amount given for that motor, 
+and then going backwards by halfsteps for twice the amount given for that motor.
+ 
+while the motor is going forwards, the green led should be lit, and while going backwards, the blue led should be lit.
+
+the default speed (the delay in between steps) for each of the motors is hardcoded to be 30 milli-seconds. this is the safest speed, yet still pretty fast for most purposes.
+
+there is also an intern parameter which needs to be tunned, called "upright_parameter" this parameter is the distance that the head motor will travel when it needs to go from completely forward/flat, to completely upright and vertical. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------
+-------manifest: ----------
+---------------------------
+
+
+
+things that have to be done:
+ - check motors, move them all alittle
+ - check LED's, flash all possible colors
+ - check camera, flash red if error in taking picture
+ - initialize HTM system with memory file (this will be done seperately)
+ - 
+
+
+
+things we would like to do:
+ - communicate status of program at all time through LED's
+ -  - if you cant do a specific task, send the LED's into the error state, a slowly flashing red LED.
+ - slowly turn in a circle, and then seperately pan head up and down, to give htm system changing sensory input
+
+
+
+
+
+
+
+accordinances of LED patterns and associated meaning:
+
+ - dim white light (constant): 
+ - - initial boot of program failure.
+
+ - red flashing light: (0.5 on, 0.5 off) 
+ - - there was something wrong in the process of 
+
+
+
+
+
+
+
+

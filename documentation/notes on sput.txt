@@ -1,0 +1,19 @@
+sput motor notes:
+
+backwards for the right motor is forwards.  (face the face )
+forward is forwards for the left motor.  (face the face )
+down for the head motor is "forwards"   ({no orienation preference})
+
+12 16 20 21 is the left motor,  (face the face)
+24 25 8 7 is the right motor, (face the face)
+
+14 15 18 23 is the head
+
+
+
+
+
+compiling notes:
+
+    $ make
+    $ sudo ./wakeup
